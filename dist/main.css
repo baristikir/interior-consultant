@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
 html {
   margin: 0;
   padding: 0;
@@ -43,9 +44,78 @@ body {
 }
 
 .container {
-  padding-top: 15.135rem;
+  padding-top: 8rem;
   padding-left: 7rem;
   padding-right: 7rem;
+}
+
+.header > a, .header a:visited, .header a:hover, .header a:link {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.header .nav {
+  position: relative;
+  max-height: 11rem;
+  background-color: #181719;
+  z-index: 100;
+}
+
+.header-container {
+  padding: 1.5rem 2rem 1.5rem 2rem;
+}
+
+.header-logo {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border: white solid 1px;
+}
+
+.header-logo > span {
+  font-family: "Lora";
+  font-size: 14px;
+  padding: 0.5rem;
+}
+
+.header-links .nav-element {
+  position: relative;
+  font-size: 18px;
+  color: white;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.header-links .nav-element:not(:last-child) {
+  margin-right: 5.375rem;
+}
+
+.header-links .nav-element::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 5px;
+  width: 5px;
+  left: 50%;
+  right: 50%;
+  border-radius: 50%;
+  bottom: -30px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.header-links .nav-element:hover {
+  color: white;
+}
+
+.header-links .nav-element:hover::before {
+  opacity: 1;
+}
+
+.header .active {
+  font-weight: 600;
 }
 
 p {

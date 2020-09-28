@@ -1,0 +1,68 @@
+@import "../variables";
+.header{
+    > a,a:visited, a:hover, a:link{
+        cursor: pointer;
+        text-decoration: none;
+        color: white;
+    }
+
+    .nav{
+        position: relative;
+        max-height: 11rem;
+        background-color: $primary-background;
+        z-index: 100;
+    }
+
+    &-container{
+        padding: 1.5rem 2rem 1.5rem 2rem;
+    }
+
+    &-logo{
+        display: inline-flex;
+        border: white solid 1px;
+        > span {
+            font-family: $font-two;
+            font-size: $logo-text-size;
+            padding: 0.5rem;
+        }
+    }
+
+    &-links{
+        .nav-element{
+            position: relative;
+            font-size: $button-text-size;
+            color: white;
+            transition: color 0.2s ease;
+
+            &:not(:last-child){
+                margin-right: 5.375rem;
+            }
+
+            &::before{
+                content: "";
+                position: absolute;
+                display: block;
+                height: 5px;
+                width: 5px;
+                left: 50%;
+                right: 50%;
+                border-radius: 50%;
+                bottom: -30px;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+            }
+
+            &:hover{
+                color: white;
+                &::before{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    // For current page highlighting in the Navbar
+    .active {
+        font-weight: 600;
+    }
+}
