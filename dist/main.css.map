@@ -1,0 +1,15 @@
+{
+    "version": 3,
+    "mappings": "AEGA,OAAO,CAAC,wFAAI;AAAZ,OAAO,CAAC,wFAAI;AAAZ,OAAO,CAAC,wFAAI;ADAZ,AAAA,IAAI,CAAA;EACA,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,KAAK;EACb,SAAS,EAAE,IAAI;EACf,UAAU,EAAE,UAAU;CACzB;;AAGD,AAAA,IAAI,CAAA;EACA,UAAU,EAAE,OAAO;EACnB,KAAK,EAAE,KAAK;EACZ,WAAW,ECZJ,YAAY;EDanB,WAAW,ECYL,GAAG;CDXZ;;AAGD,AAAA,KAAK,CAAA;EACD,OAAO,EAAE,IAAI;CAahB;;AAXI,AAAD,aAAS,CAAC;EACN,eAAe,EAAE,aAAa;CACjC;;AAEA,AAAD,YAAQ,CAAC;EACL,eAAe,EAAE,MAAM;CAC1B;;AAEA,AAAD,WAAO,CAAC;EACJ,WAAW,EAAE,MAAM;CACtB;;AAIL,AAAA,UAAU,CAAC;EACP,WAAW,EAAE,SAAS;EACtB,YAAY,EAAE,IAAI;EAClB,aAAa,EAAE,IAAI;CACtB;;AIzCD,AAAA,CAAC,CAAA;EACG,WAAW,EHGJ,MAAM;CGFhB",
+    "sources": [
+        "../src/main.scss",
+        "../src/_globals.scss",
+        "../src/_variables.scss",
+        "../src/_variables.scss",
+        "../src/layouts/_navigation.scss",
+        "../src/pages/_home.scss",
+        "../src/_variables.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}

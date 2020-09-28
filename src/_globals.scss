@@ -1,0 +1,46 @@
+@import "./variables";
+
+// * Global Stylings * //
+html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+// * Global Body Styling * //
+body{
+    background: #181719;
+    color: white;
+    font-family: $font-one;
+    font-weight: $regular;
+}
+
+// * Flexbox Helper Class * //
+.flex{
+    display: flex;
+
+    &-spacing {
+        justify-content: space-between;
+    }
+
+    &-center {
+        justify-content: center;
+    }
+
+    &-align {
+        align-items: center;
+    }
+}
+
+// * Spacings * //
+.container {
+    padding-top: 15.135rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+
+
+// * Visibilities Helper Class * //
