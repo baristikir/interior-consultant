@@ -1,4 +1,5 @@
 @import "./variables";
+@import "./mixins";
 
 // * Global Stylings * //
 html{
@@ -16,6 +17,11 @@ body{
     color: white;
     font-family: $font-one;
     font-weight: $regular;
+
+    &.noscroll{
+        overflow: hidden;
+        max-height: 40em;
+    }
 }
 
 // * Flexbox Helper Class * //
@@ -44,3 +50,14 @@ body{
 
 
 // * Visibilities Helper Class * //
+.hide-for-mobile{
+    @include breakpoint-down(medium){
+        display: none;
+    }
+}
+
+.hide-for-desktop{
+    @include breakpoint-up(large){
+        display: none;
+    }
+}

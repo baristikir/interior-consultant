@@ -19,6 +19,11 @@ body {
   font-weight: 300;
 }
 
+body.noscroll {
+  overflow: hidden;
+  max-height: 40em;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -49,6 +54,108 @@ body {
   padding-right: 7rem;
 }
 
+@media (max-width: 63.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+.has-fade {
+  visibility: hidden;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    visibility: hidden;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  -webkit-animation: fade-in 0.3s ease-in-out forwards;
+          animation: fade-in 0.3s ease-in-out forwards;
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    -webkit-transform: translateX(1%);
+            transform: translateX(1%);
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    -webkit-transform: translateX(1%);
+            transform: translateX(1%);
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  -webkit-animation: fade-out 0.3s ease-in-out forwards;
+          animation: fade-out 0.3s ease-in-out forwards;
+}
+
 .header > a, .header a:visited, .header a:hover, .header a:link {
   cursor: pointer;
   text-decoration: none;
@@ -60,6 +167,19 @@ body {
   max-height: 11rem;
   background-color: #181719;
   z-index: 100;
+}
+
+.header .overlay {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: #181719;
 }
 
 .header-container {
@@ -77,6 +197,21 @@ body {
   font-family: "Lora";
   font-size: 14px;
   padding: 0.5rem;
+}
+
+.header-toggle > span {
+  display: block;
+  width: 28.5px;
+  height: 4px;
+  background-color: white;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform-origin: 2px 2px;
+          transform-origin: 2px 2px;
+}
+
+.header-toggle > span:not(:last-child) {
+  margin-bottom: 5px;
 }
 
 .header-links .nav-element {
@@ -107,11 +242,49 @@ body {
 }
 
 .header-links .nav-element:hover {
-  color: white;
+  color: #6f4a8e;
 }
 
 .header-links .nav-element:hover::before {
   opacity: 1;
+}
+
+.header.open .header-toggle > a, .header.open .header-toggle a:visited, .header.open .header-toggle a:link {
+  text-decoration: none;
+}
+
+.header.open .header-toggle > span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header.open .header-toggle > span:nth-child(2) {
+  opacity: 0;
+}
+
+.header.open .header-toggle > span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.header-mobile-menu {
+  padding-top: 50%;
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translateX(-50%, 0);
+          transform: translateX(-50%, 0);
+  z-index: 1;
+}
+
+.header-mobile-menu .nav-mobile-element {
+  display: block;
+  padding: 2rem;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .header .active {
