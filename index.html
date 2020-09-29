@@ -50,23 +50,82 @@
 
         <div class="header-mobile-menu has-fade">
           <a href="#" class="nav-mobile-element active">Home</a>
-          <a href="#" class="nav-mobile-element active">Collection</a>
-          <a href="#" class="nav-mobile-element active">About</a>
-          <a href="#" class="nav-mobile-element active">Contact</a>
+          <a href="#" class="nav-mobile-element ">Collection</a>
+          <a href="#" class="nav-mobile-element ">About</a>
+          <a href="#" class="nav-mobile-element ">Contact</a>
         </div>
       </nav>
     </header>
+
+   
+
     <div class="container hero">
-        <div class="hero-heading">
-          Interior
+    
+      <div class="content-container flex-spacing">
+        <div class="content-text">
+          <div class="hero-heading">
+            Modern Interior
+          </div>
+
+          <div class="hero-description">
+            A full-Service residential & commercial interior design and staging company offering professional organizing & eco-services.
+          </div>
+
+          <div class="hero-button flex flex-align">
+            <a href="#popup" class="button-text">Read More <img class="button-icon" src="/assets/arrow_right_alt-24px.svg" alt="icon"></a>
+          </div>
         </div>
-        <div class="hero-description">
-          A full-Service residential & commercial interior design and staging company offering professional organizing & eco-services.
+
+        <div class="content-left">
+          <div class="content-image">
+            <img class="inverted" style="width: 100%; height: 100%;" src="/assets/photo1.png" alt="Interior Showcase">
+          </div>
+          <div class="info">
+            <div class="person">
+              <div class="person-profile inverted">
+                <img src="/assets/photo2.png" alt="Aliza Webber">
+              </div>
+              <div class="person-info">
+                <p class="person-name">Aliza Webber</p>
+                <p class="person-spec">Interior Designer</p>
+              </div>
+            </div>
+            <div class="designed-by">
+              <a href="#">Designed in 2020 by <br />Aliza Webber</a>
+            </div>
+          </div>
         </div>
-        <div class="hero-button flex flex-align">
-          <a href="#" class="button-text">Read More <img class="button-icon" src="/assets/arrow_right_alt-24px.svg" alt="icon"></a>
-        </div>
+        
+      </div>
+          
+    <div id="popup" class="popup inverted">
+      <a href="#" class="close">&times;</a>
+      <h1>Magic ✨</h1>
+      <div class="animated-text">
+        Press Enter to see some Magic 🌟 
+      </div>
     </div>
+    </div>
+    <a href="#" class="close-popup"></a>
+
+    <footer class="footer">
+      <span><a href="https://www.brstkr.com">Baris Tikir</a> @ <a href="https://devchallenges.io">DevChallenges</a></span>
+    </footer>
+    
+
     <script src="./src/js/script.js"></script>
+    <script>
+      document.onkeypress = function(e) {
+        e = e || window.event;
+
+        if(e.keyCode === 13) {
+          document.documentElement.classList.toggle('dark-mode');
+
+          document.querySelectorAll('.inverted').forEach(result => {
+            result.classList.toggle('invert');
+          })
+        }
+      }
+    </script>
   </body>
 </html>

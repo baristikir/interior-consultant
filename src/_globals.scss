@@ -24,6 +24,13 @@ body{
     }
 }
 
+.dark-mode{
+    filter: invert(1) hue-rotate(180deg);
+}
+.invert{
+    filter: invert(1) hue-rotate(180deg);
+}
+
 // * Flexbox Helper Class * //
 .flex{
     display: flex;
@@ -46,6 +53,10 @@ body{
     padding-top: 8rem;
     padding-left: 7rem;
     padding-right: 7rem;
+
+    @include breakpoint-down(medium){
+        padding: 1rem;
+    }
 }
 
 
