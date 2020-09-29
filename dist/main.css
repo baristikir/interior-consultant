@@ -291,7 +291,40 @@ body.noscroll {
   font-weight: 600;
 }
 
-p {
+.hero .hero-heading {
+  font-size: 48px;
   font-family: "Lora";
+}
+
+.hero .hero-description {
+  margin-top: 2.5rem;
+  font-size: 24px;
+}
+
+.hero .hero-button {
+  margin-top: 3rem;
+  padding: 0.5rem;
+  font-size: 18px;
+  font-weight: 600;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.hero .hero-button > a, .hero .hero-button a:visited, .hero .hero-button a:link {
+  color: white;
+  text-decoration: none;
+}
+
+.hero .hero-button:hover {
+  border: white solid 1px;
+}
+
+.hero .hero-button .button-text {
+  vertical-align: middle;
+}
+
+.hero .hero-button .button-icon {
+  vertical-align: middle;
 }
 /*# sourceMappingURL=main.css.map */
