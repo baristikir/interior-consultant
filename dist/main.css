@@ -467,21 +467,28 @@ body.noscroll {
   .content-left .content-image {
     width: 350px;
     height: 264px;
-  }
-}
-
-@media (max-width: 63.9375em) {
-  .content-left .content-image {
-    width: 460px;
-    height: 320px;
     margin-top: 2rem;
   }
 }
 
-@media (max-width: 87.4375em) {
+@media (min-width: 40em) {
   .content-left .content-image {
     width: 460px;
     height: 320px;
+  }
+}
+
+@media (min-width: 64em) {
+  .content-left .content-image {
+    width: 560px;
+    height: 384px;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .content-left .content-image {
+    width: 760px;
+    height: 550px;
   }
 }
 
@@ -511,7 +518,7 @@ body.noscroll {
 @media (max-width: 23.5em) {
   .content-left .info {
     top: 13rem;
-    left: .125rem;
+    left: .675rem;
     width: 300px;
     height: 138px;
     padding: .75rem;

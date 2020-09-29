@@ -66,17 +66,21 @@
         height: 550px;
     
         @include breakpoint-down(small){
-           width: 350px;
-           height: 264px; 
-        }
-        @include breakpoint-down(medium){
-            width: 460px;
-            height: 320px;
+            width: 350px;
+            height: 264px; 
             margin-top: 2rem;
         }
-        @include breakpoint-down(large){
+        @include breakpoint-up(medium){
             width: 460px;
             height: 320px;
+        }
+        @include breakpoint-up(large){
+            width: 560px;
+            height: 384px;
+        }
+        @include breakpoint-up(xlarge){
+            width: 760px;
+            height: 550px;
         }
     }
     
@@ -100,7 +104,7 @@
     
         @include breakpoint-down(small){
             top: 13rem;
-            left: .125rem;
+            left: .675rem;
             width: 300px;
             height: 138px;
             padding: .75rem;
