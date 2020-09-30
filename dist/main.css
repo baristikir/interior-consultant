@@ -461,6 +461,7 @@ body.noscroll {
 .content-left .content-image {
   width: 760px;
   height: 550px;
+  max-width: 100%;
 }
 
 @media (max-width: 23.5em) {
@@ -518,7 +519,7 @@ body.noscroll {
 @media (max-width: 23.5em) {
   .content-left .info {
     top: 13rem;
-    left: .675rem;
+    left: .125rem;
     width: 300px;
     height: 138px;
     padding: .75rem;
@@ -671,10 +672,10 @@ body.noscroll {
   text-align: center;
   margin-bottom: 2rem;
   display: block;
-  position: absolute;
   width: 100%;
   height: 24px;
   bottom: -30%;
+  margin-top: 12rem;
 }
 
 @media (max-width: 63.9375em) {

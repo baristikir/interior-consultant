@@ -64,6 +64,7 @@
     .content-image{
         width: 760px;
         height: 550px;
+        max-width: 100%;
     
         @include breakpoint-down(small){
             width: 350px;
@@ -104,7 +105,7 @@
     
         @include breakpoint-down(small){
             top: 13rem;
-            left: .675rem;
+            left: .125rem;
             width: 300px;
             height: 138px;
             padding: .75rem;
@@ -120,6 +121,7 @@
                     height: 3.125rem;
                     width: 3.125rem;
                     border-radius: 50%;
+
     
                     @include breakpoint-down(medium){
                         height: 2.3125rem;
